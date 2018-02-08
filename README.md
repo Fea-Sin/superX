@@ -27,4 +27,4 @@ npm run e2e
 npm test
 ```
 
-thanks to Evan You
+thanks to [Evan You](http://evanyou.me/)
