@@ -1,15 +1,31 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import VueRouter from 'vue-router'
+import iView from 'iview'
+import { routers } from './router'
+import Util from '@/libs/util'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+const routerConfig = {
+  routes: routers
+}
+
+export const router = new VueRouter(routerConfig)
+
+router.beforeEach((to, from, next) => {
+  // console.log(from)
+  // console.log(to)
+  iView.LoadingBar.start()
+
+  Util.title(to.meta.title)
+  next()
+
+  iView.LoadingBar.finish()
 })
+
+router.afterEach( () => {
+  iView.LoadingBar.finish()
+  window.scrollTo(0, 0)
+} )
+
+export default router
