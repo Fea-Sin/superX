@@ -2,9 +2,8 @@
   <div class="test-main">
     <div class="test-hello">
       <Button type="info" @click="addTwo">add</Button>
-      {{ countOne }}
+      <span class="number">{{ countTwo }}</span>
     </div>
-    <div>{{ countTwo }}</div>
   </div>
 </template>
 
@@ -40,8 +39,14 @@ export default {
 <style lang="less" scoped>
   .test-main {
     .test-hello {
+      max-width: 1040px;
+      margin: 0 auto;
       font-size: 20px;
       color: #ac0707;
+    }
+    .number {
+      color: #01adce;
+      font-size: 24px;
     }
   }
 </style>

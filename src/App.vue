@@ -1,17 +1,18 @@
 <template>
   <div class="app">
-    <div class="test">this come from app</div>
-    <Button type="info">hello world</Button>
-    <div class="abc">
-      <div class="ef">123456</div>
-    </div>
+    <superx></superx>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import superx from './components/superx'
+
 export default {
   name: 'app',
+  components: {
+    superx
+  },
   data () {
     return {
 
@@ -39,6 +40,10 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+  @import './styles/app';
+</style>
 
 <style lang="less" scoped>
   .app {
