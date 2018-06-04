@@ -1,6 +1,6 @@
 {
   "name": "superx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue.js project",
   "main": "index.js",
   "scripts": {
@@ -37,6 +37,7 @@
   "author": "feasin",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "iview": "^2.9.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
